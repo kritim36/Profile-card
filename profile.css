@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+}
+.profile-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 425px;
+    max-width: 350px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+#switch{
+    display: none;
+}
+#switch:checked ~ .profile-card {
+    background: #1f1c1c;
+}
+
+.profile-card .toggle{
+    width: 40px;
+    height: 20px;
+    background: rgb(81, 70, 231);
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+#switch:checked ~ .profile-card .toggle{
+    background: #fff;
+}
+.toggle .circle{
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 2px;
+    transition: all 0.3s ease;
+}
+#switch:checked ~ .profile-card .circle{
+    margin-left: 22px;
+    background:rgb(81, 70, 231) ;
+}
+
+/* .profile-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: rgb(81, 70, 231);
+} */
+
+.image{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: rgb(81, 70, 231);
+    padding: 3px;
+    margin-bottom: 10px;
+}
+/* #switch:checked ~ .profile-card .image{
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+} */
+
+.image .profile-img{
+   height: 100%; 
+   width: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 3px solid rgb(247, 244, 244);
+}
+/* #switch:checked ~ .profile-card .image .profile-img{
+    border-color: transparent;
+} */
+
+.profile-card .text-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(47, 47, 47);
+}
+#switch:checked ~ .profile-card .text-data{
+    color: #fff;
+}
+
+.text-data .name{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.text-data .job{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.profile-card .media-buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.media-buttons .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    margin: 0 8px;
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    border-radius: 50%;
+    /* background-color: rgb(124, 124, 243); */
+    text-decoration: none;
+
+}
+
+.profile-card .buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.buttons .button{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 24px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: rgb(81, 70, 231);
+   margin: 0 10px;
+   padding: 8px 24px;
+   
+}
+#switch:checked ~ .profile-card .buttons .button{
+     color: rgb(81, 70, 231);
+     background: #fff;
+}
+
+.buttons .button:hover{
+    transform: scale(0.97);
+    /* background-color: rgb(2, 2, 250); */
+}
